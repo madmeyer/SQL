@@ -1,0 +1,26 @@
+CREATE TABLE store_inventory (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, cost INTEGER);
+
+INSERT INTO store_inventory VALUES (1, "chair", 5, 1, 800);
+INSERT INTO store_inventory VALUES (2, "sofa", 3, 1, 1000);
+INSERT INTO store_inventory VALUES (3, "pillow", 50, 1, 50);
+INSERT INTO store_inventory VALUES (4, "table", 2, 2, 800);
+INSERT INTO store_inventory VALUES (5, "desk", 7, 2, 500);
+INSERT INTO store_inventory VALUES (6, "office_chair", 10, 2, 200);
+INSERT INTO store_inventory VALUES (7, "bedframe", 9, 3, 1000);
+INSERT INTO store_inventory VALUES (8, "mattress", 10, 3, 500);
+INSERT INTO store_inventory VALUES (9, "dresser", 2, 4, 1200);
+INSERT INTO store_inventory VALUES (10, "china_cabinet", 3, 4, 1800);
+INSERT INTO store_inventory VALUES (11, "island", 4, 5, 800);
+INSERT INTO store_inventory VALUES (12, "night_stand", 6, 4, 200);
+INSERT INTO store_inventory VALUES (13, "end_table", 10, 1, 300);
+INSERT INTO store_inventory VALUES (14, "coffee_table", 8, 1, 400);
+INSERT INTO store_inventory VALUES (15, "lamp", 15, 1, 100);
+
+--display the database ordered by price. 
+SELECT * FROM store_inventory
+ORDER BY cost desc;
+
+--how many items are in each isle? 
+SELECT aisle, SUM(quantity) 
+FROM store_inventory
+GROUP BY aisle;
