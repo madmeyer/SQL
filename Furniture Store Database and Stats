@@ -1,3 +1,5 @@
+--Create a furniture store database
+
 CREATE TABLE store_inventory (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, cost INTEGER);
 
 INSERT INTO store_inventory VALUES (1, "chair", 5, 1, 800);
